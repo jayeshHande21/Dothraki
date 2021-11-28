@@ -14,10 +14,11 @@ function clickHandler() {
 
     fetch(getServerURL(inputText))
         .then(response => response.json())
-        .then(json =>{
-        var translatedText=(json.contents.translated)
-        outputdiv.innerText=translatedText;})
-        
+        .then(json => {
+            var translatedText = (json.contents.translated)
+            outputdiv.innerText = translatedText;
+        })
+
 
 }
 
