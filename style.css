@@ -44,10 +44,10 @@ body {
     border-radius: 2rem;
     background-color: rgb(224, 205, 205);
     color: black;
-    border:2px solid black;
+    border: 2px solid black;
 }
 
-    #button {
+#button {
     height: 30px;
     text-align: center;
     width: 200px;
@@ -63,16 +63,16 @@ body {
 #output {
     width: 350px;
     padding: 20px;
-    height:60px;
+    height: 60px;
     background-color: white;
     margin: auto;
     padding-top: 30px;
     border-radius: 2rem;
-    padding-top:20px;
+    padding-top: 20px;
     margin-left: 420px;
-    margin-top:20px;
+    margin-top: 20px;
     background-color: rgb(224, 205, 205);
-    border:2px solid black;
+    border: 2px solid black;
 }
 
 
