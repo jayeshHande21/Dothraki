@@ -60,6 +60,7 @@ body{
     background-color: rgba(0,0,0,0.5);
     overflow: hidden;
     height:100px;
+    padding-bottom: 10px;
     color:rgb(212, 191, 191);
 }
 p{
