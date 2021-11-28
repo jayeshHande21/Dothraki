@@ -1,8 +1,8 @@
-var textinput = document.querySelector("#text-input");
-var btnTranslate = document.querySelector("#btn-translate");
+var textinput = document.querySelector("#place");
+var btnTranslate = document.querySelector("#button");
 var outputdiv = document.querySelector("#output");
 
-var serverURL = "https://api.funtranslations.com/translate/"
+var serverURL = "https://api.funtranslations.com/translate/dothraki.json"
 
 function getServerURL(text) {
     return serverURL + "?" + "text=" + text
