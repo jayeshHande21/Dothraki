@@ -1,25 +1,28 @@
-var textinput = document.querySelector("#place");
-var btnTranslate = document.querySelector("#button");
-var outputdiv = document.querySelector("#output");
+var btnTranslate = document.querySelector("#translate-button");
+var input = document.querySelector("#input");
+var output = document.querySelector("#output");
+var serverURL = "https://api.funtranslations.com/translate/dothraki.json";
 
-var serverURL = "https://api.funtranslations.com/translate/dothraki.json"
+function getUrl(text) {
+  return serverURL + "?text=" + text;
+}
 
-function getServerURL(text) {
-    return serverURL + "?" + "text=" + text
+function errorHandler(error) {
+  alert("Something is wrong! Please try after some time.");
+  console.log("Error : " + error);
 }
 
 function clickHandler() {
+  var inputText = input.value;
 
-    var inputText = textinput.value;
+  if (inputText === "") alert("Please Enter the text to be translated");
 
-    fetch(getServerURL(inputText))
-        .then(response => response.json())
-        .then(json => {
-            var translatedText = (json.contents.translated)
-            outputdiv.innerText = translatedText;
-        })
-
-
+  fetch(getUrl(inputText))
+    .then((response) => response.json())
+    .then((json) => {
+      var translatedText = json.contents.translated;
+      output.innerText = translatedText;
+    })
+    .catch(errorHandler);
 }
-
 btnTranslate.addEventListener("click", clickHandler);
