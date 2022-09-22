@@ -10,5 +10,7 @@ of the central plains of Essos, known as the Dothraki Sea.
 
 ## Languages Used :
 - HTML5
+
 - CSS3
+
 - JavaScript
